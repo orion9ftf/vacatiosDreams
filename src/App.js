@@ -1,14 +1,16 @@
 // App.js
 import React, { useEffect, useState } from 'react';
-import VacationsDreams from './VacationsDreams/VacationsDreams';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+//import VacationsDreams from './VacationsDreams/VacationsDreams';
+import ShowVacations from './components/ShowVacations';
 
 function App() {
   return (
-    <div className="App">
-      <h2>react</h2>
-
-      <VacationsDreams />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<ShowVacations></ShowVacations>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
